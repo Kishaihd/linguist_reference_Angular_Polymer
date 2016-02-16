@@ -1,0 +1,40 @@
+<style>
+    .nTable {
+        outline: 1px solid black;
+
+    }
+
+
+</style>
+
+<paper-material class="layout horizontal wrap" [style.width.px="tableSize">
+    <h1>{{wordGroup.name}}</h1>
+    <div *ngFor="#word of wordGroup.masculine, #i=index">
+        <div *ngFor="#declension of wordGroup.masculine[i], #j=index">
+            <!--h2>{{wordGroup.masculine[i]["nominative"]["singular"]}}</h2-->
+            <table border="1">
+                <tr>
+                    <td>{{wordGroup.cases[i]}}</td><td>{{declension["singular"]}}</td> <!-- wordGroup.masculine[i] -->
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--<div *ngFor="#declension of wordGroup.feminine, #i=index">-->
+        <!--<h2>{{wordGroup.feminine[i]["word"]}}</h2>-->
+        <!--<table border="1">-->
+            <!--<tr>-->
+                <!--<td>{{"cases[i]"}}</td><td>{{}}</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+    <!--</div>-->
+
+    <!--<div *ngFor="#declension of wordGroup.neuter, #i=index">-->
+        <!--<h2>{{wordGroup.neuter[i]["word"]}}</h2>-->
+        <!--<table border="1">-->
+            <!--<tr>-->
+                <!--<td>{{cases[i]}}</td><td>{{}}</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+    <!--</div>-->
+
+</paper-material>

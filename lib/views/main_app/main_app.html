@@ -1,0 +1,67 @@
+<style>
+    .content {
+        padding: 15px;
+    }
+
+    .app-title {
+        text-align: center;
+    }
+
+    message-bar {
+        margin-bottom: 10px;
+    }
+</style>
+
+<paper-header-panel class="fit">
+    <paper-toolbar class="layout horizontal center center-justified">
+        <h2>Linguist Reference App</h2>
+    </paper-toolbar>
+
+    <paper-tabs selected="{{currentTab}}">
+        <paper-tab>Nouns</paper-tab>
+        <paper-tab>Adjectives</paper-tab>
+        <paper-tab>Verbs</paper-tab>
+    </paper-tabs>
+
+    <iron-pages selected="{{currentTab}}">
+        <div> <!-- Noun View -->
+            <noun-view></noun-view><!--<dom-module id="noun-declensions">-->
+                <!--<template>-->
+                    <!--<div> Masculine: </div>-->
+                    <!--<template is="dom-repeat" items="{{WordGroup}}">-->
+                        <!--<div># <span>{{WordGroup.name}}</span></div>-->
+                        <!--<div>{{item.}} <span>{{item.first}}</span></div>-->
+                        <!--&lt;!&ndash;<div>Last name: <span>{{item.last}}</span></div>&ndash;&gt;-->
+                    <!--</template>-->
+                <!--</template>-->
+
+                <!--&lt;!&ndash;<template>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div> Masculine: </div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<template is="dom-repeat" items="{{m-nouns}}">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div># <span>{{index}}</span></div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div>First name: <span>{{item.first}}</span></div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div>Last name: <span>{{item.last}}</span></div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</template>&ndash;&gt;-->
+                <!--&lt;!&ndash;</template>&ndash;&gt;-->
+
+            <!--</dom-module>-->
+        </div>
+
+        <div>Page 2</div>
+        <div>Page 3</div>
+    </iron-pages>
+
+    <!--<div class="fit layout horizontal start center-justified content">-->
+    <!--<paper-material elevation="1" class="card layout vertical">-->
+    <!--<h4>Original</h4>-->
+    <!--<paper-textarea value="{{originalMessage}}"></paper-textarea>-->
+    <!--<paper-icon-button src="[[encryptIconPath]]" on-tap="onEncrypt" disabled$="[[disableButton(originalMessage)]]"></paper-icon-button>-->
+    <!--</paper-material>-->
+
+    <!--<paper-material elevation="1" class="card layout vertical">-->
+    <!--<h4>Encrypted</h4>-->
+    <!--<paper-textarea value="{{encryptedMessage}}" spellcheck="false"></paper-textarea>-->
+    <!--<paper-icon-button src="[[decryptIconPath]]" on-tap="onDecrypt" disabled$="[[disableButton(encryptedMessage)]]"></paper-icon-button>-->
+    <!--</paper-material>-->
+    <!--</div>-->
+</paper-header-panel>
